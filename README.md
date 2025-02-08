@@ -1,4 +1,4 @@
-# Heritage Park YSA
+# Heritage Park YSA Website
 Repository for the [Heritage Park YSA](https://hpysa.com) website
 
 **NOTE:** https://hpysa.com expires on 2/8/2030 (disabled auto-renew)
