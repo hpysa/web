@@ -1,5 +1,5 @@
 {
-  "name": "hpysa",
+  "name": "web",
   "module": "index.ts",
   "type": "module",
   "scripts": {
@@ -16,6 +16,7 @@
     "typescript": "^5.0.0"
   },
   "dependencies": {
-    "hpysa": "file:"
+    "hpysa": "file:",
+    "web": "file:"
   }
 }

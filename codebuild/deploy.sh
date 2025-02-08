@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd ~/hpysa ## Assume your code is in ~/hpysa
+cd ~/web ## Assume your code is in ~/web
 
 git status
 git pull 
