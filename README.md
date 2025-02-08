@@ -1,8 +1,12 @@
-# HPYSA
-Main repo for the hpysa site. 
+# Heritage Park YSA
+Repository for the [Heritage Park YSA](https://hpysa.com) website
 
-- /admin - Where leadership tools are
-- /attendance - For the attendance QR code
-- /codebuild - Build tools 
-- /main - The main site powered by google sheets
-- /qrcodes - All QR codes for the site
+**NOTE:** https://hpysa.com expires on 2/8/2030 (disabled auto-renew)
+
+Please login to renew: https://dash.cloudflare.com/login
+
+* /admin - Where leadership tools are
+* /attendance - For the attendance QR code
+* /codebuild - Build tools 
+* /main - The main site powered by google sheets
+* /qrcodes - All QR codes for the site
