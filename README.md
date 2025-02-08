@@ -5,7 +5,7 @@ Repository for the [Heritage Park YSA](https://hpysa.com) website
 
 Please login to renew: https://dash.cloudflare.com/login
 
-For hosting, we use [Netlify](https://app.netlify.com)
+For hosting, we use [Netlify](https://app.netlify.com) via Email Login (hpysaweb@gmail.com)
 
 * /admin - Where leadership tools are
 * /attendance - For the attendance QR code
