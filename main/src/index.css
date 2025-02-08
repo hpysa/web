@@ -1,0 +1,11 @@
+header, 
+footer,
+.center {
+  text-align: center;
+  margin: auto;
+}
+
+main {
+  padding: auto;
+  margin: auto;
+}

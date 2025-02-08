@@ -1,0 +1,21 @@
+{
+  "name": "hpysa",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "deploy": "bash ./codebuild/deploy.sh",
+    "pub": "bun run deploy",
+    "scripts": "cd scripts && node index.js",
+    "scripts:install": "cd scripts && npm install",
+    "scripts:attendance": "cd scripts && node attendancecron.js"
+  },
+  "devDependencies": {
+    "bun-types": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "hpysa": "file:"
+  }
+}
