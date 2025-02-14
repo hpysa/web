@@ -15,17 +15,9 @@ const images = [
 ]
 const Activities = () => (
 	<>
-		<ResponsiveMasonry
-			columnsCountBreakPoints={{ 350: 1, 768: 2 }}
-		>
-			<Masonry containerTag="section">
-				{images.map((image, i) => (
-					<img
-						key={i}
-						src={image}
-						className="block w-full"
-					/>
-				))}
+		<ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 768: 2 }}>
+			<Masonry containerTag="section" className="!gap-6 [&>div]:!gap-6">
+				{ images.map((image, i) => <img className="block w-full" key={i} src={image} />) }
 			</Masonry>
 		</ResponsiveMasonry>
 		<hr />
