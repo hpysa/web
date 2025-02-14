@@ -17,7 +17,6 @@ const Activities = () => (
 	<>
 		<ResponsiveMasonry
 			columnsCountBreakPoints={{ 350: 1, 768: 2 }}
-			gutterBreakpoints={{ 320: "32px" }}
 		>
 			<Masonry containerTag="section">
 				{images.map((image, i) => (
