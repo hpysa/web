@@ -57,7 +57,7 @@ export default function Wrapper() {
 					</Card>
 					<Card className="border-0">
 						<div className="flex flex-col items-center justify-center p-4 shadow-md sm:p-4 border rounded">
-							<span className="sm:text-lg text-primary font-serif font-bold">BISHOP</span>
+							<span className="sm:text-lg text-primary font-serif font-bold">BISHOP MUGLESTON</span>
 							<a className="transition-all font-sans text-base lg:text-lg hover:underline hover:text-tertiary" href="tel:(801) 367-0602" aria-label="Bishop's Phone Number">(801) 367-0602</a>
 						</div>
 					</Card>
