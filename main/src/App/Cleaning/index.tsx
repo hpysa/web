@@ -1,4 +1,4 @@
-import { Input, Button } from "antd";
+import { Button, Input } from "antd";
 import { useState } from "react";
 
 export default function Cleaning() {

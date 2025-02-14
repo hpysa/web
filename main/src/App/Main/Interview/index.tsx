@@ -1,5 +1,5 @@
-import { lazy, Suspense } from "react";
 import { Collapse } from "antd";
+import { lazy, Suspense } from "react";
 
 export default function Interview() {
     const Stake = lazy(() => import("./Stake"));

@@ -1,13 +1,11 @@
-import { Input, Select, Button, Spin } from "antd";
-import { useState } from "react";
+import { Button, Input, Select, Spin } from "antd";
 import axios from "axios";
+import { useState } from "react";
 
-import FormSections from "./FormSections";
-import YesNoSelector from "./YesNoSelector";
 import Chocolate from "./Chocolate";
+import FormSections from "./FormSections";
 import useIpAddress from "./useIpAddress";
-
-import s from './index.module.css';
+import YesNoSelector from "./YesNoSelector";
 
 const apiUrl = "https://script.google.com/macros/s/AKfycbyAeWthC460ALMkODk348BbCEd3GgWtyX_Mqi8kkgSOba3-hOYtJwmueAY3vdHMQzpg/exec";
 
@@ -100,7 +98,6 @@ export default function Form() {
                 <div>
                     Gender
                     <Select 
-                        className={s.select}
                         onChange={(e) => setGender(e)} 
                         value={gender}
                     >
@@ -138,7 +135,6 @@ export default function Form() {
                 <div>
                     How long are you planning to stay in the ward area?
                     <Select 
-                        className={s.select}
                         onChange={(e) => setStay(e)} 
                         value={stay}
                     >

@@ -1,5 +1,3 @@
-import s from './QRimg.module.css';
-
 /**
  * Functional component for rendering a QR code image.
  *
@@ -8,13 +6,12 @@ import s from './QRimg.module.css';
  */
 const QRImg = ({src, h2 = ''} : {src: string, h2?: string}) => (
     <>
-        {h2 && s.h2 && <h2 className={s.h2}>{h2}</h2>}
-        <img 
-            src={src} 
-            alt="QR Code" 
-            width="400" 
-            height="400" 
-            className={s.qr}
+        {h2 && <h2>{h2}</h2>}
+        <img
+            src={src}
+            alt="QR Code"
+            width="400"
+            height="400"
         />
     </>
 );

@@ -1,7 +1,6 @@
 import { Select } from "antd";
 
 import FormSections from "./FormSections";
-import s from './index.module.css';
 
 type ChocolateType = {
     value: string,
@@ -15,7 +14,6 @@ export default function Chocolate({value, set}: ChocolateType) {
             <p>You completed the survey choose your chocolate. Talk to the Ward Clerk to get your chocolate.</p>
             <strong>NOTE: Not all chocolates may be available</strong>
             <Select 
-                className={s.select}
                 onChange={(e) => set(e)} 
                 value={value}
             >

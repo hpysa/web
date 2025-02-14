@@ -1,19 +1,20 @@
 import { StrictMode } from 'react';
-import ReactDOM from 'react-dom/client';
-
+import { createRoot } from 'react-dom/client';
 import { AntdProvider, QueryProvider } from './Providers';
+import GlobalStyles from './styles/GlobalStyles'
 import App from './App';
-import './index.css';
+import "./styles/globalStyles.css"
 
 const container = document.getElementById('root');
-const root = ReactDOM.createRoot(container!);
+const root = createRoot(container!);
 
 root.render(
-  <StrictMode>
-    <AntdProvider>
-      <QueryProvider>
-        <App />
-      </QueryProvider>
-    </AntdProvider>
+	<StrictMode>
+		<GlobalStyles />
+		<AntdProvider>
+			<QueryProvider>
+				<App />
+			</QueryProvider>
+		</AntdProvider>
   </StrictMode>,
 );

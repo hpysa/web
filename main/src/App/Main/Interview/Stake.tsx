@@ -1,4 +1,4 @@
-import { Row, Col } from "antd";
+import { Col, Row } from "antd";
 
 export default function Stake() {
     return (

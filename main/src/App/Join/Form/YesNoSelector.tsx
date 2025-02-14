@@ -1,7 +1,5 @@
 import { Select } from "antd";
 
-import s from './index.module.css';
-
 type YesNoSelectorType = {
     title: string,
     value: string,
@@ -13,7 +11,6 @@ export default function YesNoSelector ({title, value, set}: YesNoSelectorType) {
         <div>
             {title}
             <Select 
-                className={s.select}
                 onChange={(e) => set(e)} 
                 value={value}
             >

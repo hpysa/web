@@ -1,8 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import getCSV from "../../../getCSV";
 
-import s from './index.module.css';
-
 const dataUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ-nZns9eqbNOFLhBRWc1LRQLvt_gofRmUIOEVEyjBNBnF9_S0DUaJJ6kNUAmsQEEnm51b7CkTjqIV0/pub?gid=1096489776&single=true&output=csv";
 
 export default function Bishop() {
@@ -24,9 +22,9 @@ export default function Bishop() {
 
     return (
         <div>
-            <strong>Contact the Executive Secretary, {Name}:</strong>
+            <strong>Executive Secretary: {Name}</strong>
             <ul>
-                <li><strong>Phone: </strong><a href={`tel:${Phone}`} className={s.phone}>{Phone}</a></li>
+                <li><strong>Phone: </strong><a href={`tel:${Phone}`}>{Phone}</a></li>
                 <li><strong>Email: </strong><a href={`mailto:${Email}`}>{Email}</a></li>
             </ul>
         </div>

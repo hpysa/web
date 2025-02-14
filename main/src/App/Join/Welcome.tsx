@@ -1,6 +1,6 @@
 export default function Welcome () {
     return (
-        <section className="center">
+        <section>
             <h2>Information Survey</h2>
             <p>            
                 Welcome to the Heritage Park YSA Ward! 
