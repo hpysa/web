@@ -6,7 +6,7 @@ const Header = () => (
 		<Announcements />
 		<header className="flex flex-col items-center justify-center w-full text-center gap-6 sm:gap-8">
 			<img className="rounded" src="https://res.cloudinary.com/hpysa/f_auto,q_auto/hero" />
-			<section className="flex flex-col items-center justify-center w-full font-sans gap-8">
+			<section className="flex flex-col items-center justify-center w-full font-sans gap-6 sm:gap-8">
 				<h1 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-primary">Heritage Park YSA Ward, 26&ndash;35</h1>
 				<div className="flex items-start justify-center w-full mt-4">
 					<hr className="flex-grow border-t border-primary" />
