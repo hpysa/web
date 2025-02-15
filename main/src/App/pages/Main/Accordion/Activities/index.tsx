@@ -22,7 +22,6 @@ const Activities = memo(() => {
 
     return (
 		<Table
-			className="rounded [&_*]:font-sans"
             dataSource={sortByDate(filterData(data))} 
             columns={activitiesColumns} 
         />

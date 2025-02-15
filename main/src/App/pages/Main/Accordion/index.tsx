@@ -7,7 +7,7 @@ const Activities = lazy(() => import("./Activities"));
 const Accordion = () => (
 	<section>
 		<Collapse
-			className="font-sans shadow-md"
+			className="shadow-md"
 			size="large"
 			accordion
 			defaultActiveKey={2}

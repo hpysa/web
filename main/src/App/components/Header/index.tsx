@@ -4,7 +4,7 @@ import Announcements from './Announcements';
 const Header = () => (
 	<>
 		<Announcements />
-		<header className="flex flex-col items-center justify-center w-full text-center gap-8">
+		<header className="flex flex-col items-center justify-center w-full text-center gap-6 sm:gap-8">
 			<img className="rounded" src="https://res.cloudinary.com/hpysa/f_auto,q_auto/hero" />
 			<section className="flex flex-col items-center justify-center w-full font-sans gap-8">
 				<h1 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-primary">Heritage Park YSA Ward, 26&ndash;35</h1>
@@ -30,25 +30,25 @@ const Header = () => (
 				<Card className="border-0">
 					<div className="flex flex-col items-center justify-center p-4 shadow-md sm:p-4 border rounded">
 						<span className="sm:text-lg text-primary font-serif font-bold">BISHOP MUGLESTON</span>
-						<a className="transition-all font-sans text-base lg:text-lg hover:underline hover:text-tertiary" href="tel:(801) 367-0602" aria-label="Bishop's Phone Number">(801) 367-0602</a>
+						<a className="transition-all font-sans text-base sm:text-lg hover:underline hover:text-tertiary" href="tel:(801) 367-0602" aria-label="Bishop's Phone Number">(801) 367-0602</a>
 					</div>
 				</Card>
 				<Card className="border-0">
 					<div className="flex flex-col items-center justify-center p-4 shadow-md sm:p-4 border rounded">
 						<span className="sm:text-lg text-primary font-serif font-bold">EXECUTIVE SECRETARY</span>
-						<a className="transition-all font-sans text-base lg:text-lg hover:underline hover:text-tertiary" href="tel:(209) 790-9348" aria-label="Executive Secretary's Phone Number">(209) 790-9348</a>
+						<a className="transition-all font-sans text-base sm:text-lg hover:underline hover:text-tertiary" href="tel:(209) 790-9348" aria-label="Executive Secretary's Phone Number">(209) 790-9348</a>
 					</div>
 				</Card>
 				<Card className="border-0">
 					<div className="flex flex-col items-center justify-center p-4 shadow-md sm:p-4 border rounded">
 						<span className="sm:text-lg text-primary font-serif font-bold">ACTIVITY NIGHT &#47; FHE</span>
-						<span className="font-sans text-base lg:text-lg">Mondays @ 7:00PM</span>
+						<span className="font-sans text-base sm:text-lg">Mondays @ 7:00PM</span>
 					</div>
 				</Card>
 				<Card className="border-0">
 					<div className="flex flex-col items-center justify-center p-4 shadow-md sm:p-4 border rounded">
 						<span className="sm:text-lg text-primary font-serif font-bold">STAKE NIGHT &#47; INSTITUTE</span>
-						<span className="font-sans text-base lg:text-lg">Thursdays @ 6:30PM</span>
+						<span className="font-sans text-base sm:text-lg">Thursdays @ 6:30PM</span>
 					</div>
 				</Card>
 			</section>
