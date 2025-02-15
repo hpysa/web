@@ -7,10 +7,11 @@ module.exports = {
 	theme: {
 		extend: {
 			fontFamily: {
-				sans: ['"Nimbus Sans Light"', ...defaultTheme.fontFamily.sans],
-				serif: ['windsor_probold', ...defaultTheme.fontFamily.serif]
+				sans: ['"Nimbus Sans"', ...defaultTheme.fontFamily.sans],
+				serif: ['Windsor Pro', ...defaultTheme.fontFamily.serif]
 			},
 			screens: {
+				xxs: '375px',
 				xs: '425px'
 			},
 			borderRadius: {

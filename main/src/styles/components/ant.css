@@ -1,0 +1,23 @@
+.ant-card-body {
+	@apply !p-0;
+}
+
+.ant-collapse {
+	@apply !font-sans !rounded;
+}
+
+.ant-collapse-item-active svg {
+	@apply !text-primary !transition-all;
+}
+
+.ant-collapse-header-text {
+	@apply !font-bold;
+}
+
+.ant-collapse-header-text, .ant-table-cell {
+	@apply sm:!text-base;
+}
+
+.ant-pagination-item-active, .ant-pagination-item-active a {
+	@apply !text-primary !border-primary
+}

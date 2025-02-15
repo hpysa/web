@@ -1,4 +1,4 @@
-import { createContext, lazy } from "react";
+import { createContext, lazy } from 'react';
 
 export const AntdProvider = lazy(() => import('./AntdProvider'));
 export const QueryProvider = lazy(() => import('./QueryProvider'));
