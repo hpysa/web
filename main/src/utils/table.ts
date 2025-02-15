@@ -1,29 +1,34 @@
 // @ts-nocheck 
 
 export const leadershipColumns = [
-  {
-    title: 'Name',
-	key: 'Name',
-	render: (record: any) => record.Name,
-  },
-  {
-	title: 'Calling',
-	key: 'Calling',
-	render: (record: any) => record.Calling,
-  },
+	{
+		title: 'Name',
+		key: 'Name',
+		render: (record: any) => record.Name,
+	},
+	{
+		title: 'Calling',
+		key: 'Calling',
+		render: (record: any) => record.Calling,
+	},
 ];
 
-export const activitiesColumns = [
-  {
-    title: 'Date',
-	key: 'Date',
-	render: (record: any) => record.Date,
-  },
-  {
-    title: 'Activity',
-    key: 'Activity',
-    render: (record: any) => record.Location ? `${record.Activity} @ ${record.Location}` : record.Activity,
-  },
+	export const activitiesColumns = [
+	{
+		title: 'Date',
+		key: 'Date',
+		render: (record: any) => record.Date,
+	},
+	{
+		title: 'Activity',
+		key: 'Activity',
+		render: (record: any) => record.Location ? `${record.Activity} @ ${record.Location}` : record.Activity,
+	},
+	// {
+	// 	title: 'Location',
+	// 	key: 'Location',
+	// 	render: (record: any) => record.Location,
+	// }
 ];
 
 
