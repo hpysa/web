@@ -2,7 +2,7 @@ import { Collapse, Spin } from 'antd';
 import { lazy, Suspense } from 'react';
 
 const Leadership = lazy(() => import("./Leadership"));
-const Activities = lazy(() => import("./Activities"));
+// const Activities = lazy(() => import("./Activities"));
 
 const Info = () => (
 	<section className="flex flex-col gap-8">

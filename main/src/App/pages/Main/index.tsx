@@ -1,9 +1,9 @@
 import { memo } from 'react';
-import Calendar from './Calendar';
+// import Calendar from './Calendar';
+import Carousel from './Carousel';
 import Gallery from './Gallery';
 // import Info from './Info';
 import SocialMedia from './SocialMedia';
-import Carousel from './Carousel';
 
 const Main = memo(() => (
 	<>
