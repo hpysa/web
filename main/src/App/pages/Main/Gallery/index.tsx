@@ -1,6 +1,8 @@
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
 
 const images = [
+	"https://res.cloudinary.com/hpysa/f_auto,q_auto/v1739740022/galentines.jpg",
+	"https://res.cloudinary.com/hpysa/f_auto,q_auto/v1739749676/movie-game-night.jpg",
 	"https://res.cloudinary.com/hpysa/f_auto,q_auto/v1739474131/477587873_9188079464562701_5932187168783306515_n_esaubo.jpg",
 	"https://res.cloudinary.com/hpysa/f_auto,q_auto/v1739474127/475411045_3447973728670219_8707325149973088983_n_cxtgul.jpg",
 	"https://res.cloudinary.com/hpysa/f_auto,q_auto/v1739474108/474374166_10160444206346599_1767105335539540890_n_dneoce.jpg",
