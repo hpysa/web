@@ -9,13 +9,13 @@ const Main = lazy(() => import("./pages/Main"));
 const App = () => (
 	<Suspense>
 		<BrowserRouter>
-		<Routes>
-			<Route path="/*" element={<Wrapper />}>
-				<Route index element={<Main />} />
-				{/* <Route path="join" element={<Join />} />
-				<Route path="cleaning" element={<Cleaning />} /> */}
-			</Route>
-		</Routes>
+			<Routes>
+				<Route path="/*" element={<Wrapper />}>
+					<Route index element={<Main />} />
+					{/* <Route path="join" element={<Join />} />
+					<Route path="cleaning" element={<Cleaning />} /> */}
+				</Route>
+			</Routes>
 		</BrowserRouter>
 	</Suspense>
 );

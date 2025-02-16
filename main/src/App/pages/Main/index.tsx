@@ -1,13 +1,18 @@
 import { memo } from 'react';
-import Accordion from './Accordion';
-import Feed from './Feed';
+import Calendar from './Calendar';
+import Gallery from './Gallery';
+// import Info from './Info';
 import SocialMedia from './SocialMedia';
+import Carousel from './Carousel';
 
 const Main = memo(() => (
 	<>
-		<Accordion />
+		{/* <Info /> */}
+		<Carousel />
+		{/* <Calendar /> */}
+		{/* <Calendar type="stake" /> */}
 		<SocialMedia />
-		<Feed />
+		<Gallery />
     </>
 ));
 

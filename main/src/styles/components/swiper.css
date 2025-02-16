@@ -1,5 +1,17 @@
+.swiper-button-prev::after, .swiper-button-next::after {
+	@apply !text-2xl lg:!text-4xl font-bold lg:font-normal;
+}
+
+.swiper-button-prev {
+	@apply !-left-3 lg:!-left-12 xl:!-left-16;
+}
+
+.swiper-button-next {
+	@apply !-right-3 lg:!-right-12 xl:!-right-16;
+}
+
 .swiper-pagination {
-	@apply !bottom-4;
+	@apply !right-3 xxs:!right-0 xxs:!p-4 sm:!right-0 sm:!px-4 sm:!py-6;
 }
 
 .swiper-pagination-bullet-active {

@@ -13,15 +13,15 @@ const images = [
 	"https://res.cloudinary.com/hpysa/f_auto,q_auto/v1739474101/472751860_9001231496580833_4228976801930637330_n_eiyw6w.jpg",
 	"https://res.cloudinary.com/hpysa/f_auto,q_auto/v1739474092/470236459_8782646351782951_7773807892989331485_n_nmj0ut.jpg",
 ]
-const Feed = () => (
-	<>
+const Gallery = () => (
+	<section className="flex flex-col gap-8">
 		<ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 768: 2 }}>
 			<Masonry containerTag="section" className="!gap-6 [&>div]:!gap-6">
 				{ images.map((image, i) => <img className="block w-full shadow-md rounded" key={i} src={image} />) }
 			</Masonry>
 		</ResponsiveMasonry>
 		<hr />
-	</>
+	</section>
 );
 
-export default Feed;
+export default Gallery;
