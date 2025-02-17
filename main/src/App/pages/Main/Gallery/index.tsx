@@ -22,7 +22,7 @@ const Gallery = () => (
 				{ images.map((image, i) => <img className="block w-full shadow-md rounded" key={i} src={image} />) }
 			</Masonry>
 		</ResponsiveMasonry>
-		<hr />
+		<hr className="mt-4" />
 	</section>
 );
 

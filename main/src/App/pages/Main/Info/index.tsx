@@ -32,7 +32,7 @@ const Info = () => (
 				// }
 			]}
 		/>
-				<hr />
+		<hr />
 	</section>
 );
 
