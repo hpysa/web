@@ -7,7 +7,7 @@
 }
 
 .swiper-button-prev {
-	@apply !-left-3 lg:!-left-12 xl:!-left-16 ;
+	@apply !-left-3 lg:!-left-12 xl:!-left-16;
 }
 
 .swiper-button-next {
