@@ -1,16 +1,18 @@
 import { useEffect, useRef } from 'react';
 
 const UploadWidget = () => {
-	const cloudinaryRef = useRef();
-	const widgetRef = useRef();
+	const cloudinaryRef = useRef<any>(null);
+	const widgetRef = useRef<any>(null);
 	useEffect(() => {
 		cloudinaryRef.current = window.cloudinary;
-		widgetRef.current = cloudinaryRef.current.createUploadWidget({
-			cloudName: 'hpysa',
-			uploadPreset: 'ml_default',
-			folder: 'activity',
-			tags: ['activity']
-		});
+		if (cloudinaryRef.current) {
+			widgetRef.current = cloudinaryRef.current.createUploadWidget({
+				cloudName: 'hpysa',
+				uploadPreset: 'ml_default',
+				folder: 'activity',
+				tags: ['activity']
+			});
+		}
 	}, []);
 	
 	return (

@@ -10,4 +10,10 @@ type CloudinaryImageType = {
 	width: integer,
 };
 
+declare global {
+	interface Window {
+		cloudinary: any;
+	}
+}
+
 export default CloudinaryImageType;

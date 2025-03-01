@@ -14,7 +14,7 @@ const cld = new Cloudinary({
 
 export const getImages = async (dataUrl: string) => {
 	const { data: { resources: data } } = await axios.get(dataUrl);
-	return data?.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
+	return data?.sort((a: { created_at: string }, b: { created_at: string }) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime());
 };
 
 export const getImageURL = (img: CloudinaryImageType): CloudinaryImage => cld.image(img?.public_id).format('auto').quality('auto');
