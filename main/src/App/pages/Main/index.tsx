@@ -1,19 +1,19 @@
 import { memo } from 'react';
-// import Calendar from './Calendar';
 import Carousel from './Carousel';
 import Gallery from './Gallery';
-// import Info from './Info';
 import SocialMedia from './SocialMedia';
+import UploadWidget from './UploadWidget';
 
-const Main = memo(() => (
-	<>
-		{/* <Info /> */}
-		<Carousel />
-		{/* <Calendar /> */}
-		{/* <Calendar type="stake" /> */}
-		<SocialMedia />
-		<Gallery />
-    </>
-));
+const Main = memo(() => {
+	const isAdmin = new URLSearchParams(window.location.search).has(import.meta.env.VITE_ADMIN);
+	return (
+		<>
+			<Carousel />
+			{ isAdmin && <UploadWidget />}
+			<SocialMedia />
+			<Gallery />
+		</>
+	);
+});
 
 export default Main;
