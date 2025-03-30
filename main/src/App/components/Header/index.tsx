@@ -38,31 +38,31 @@ const Header = () => (
             </section>
             <section className="text-md mx-auto grid w-full grid-cols-1 grid-rows-2 gap-6 sm:grid-cols-[repeat(2,minmax(15rem,1fr))] lg:gap-8">
                 <Card className="border-0">
-                    <div className="flex flex-col items-center justify-center gap-1 rounded border p-4 font-sans text-base text-primary shadow-md sm:p-4">
-                        <span className="font-sans text-base font-medium uppercase">BISHOP MUGLESTON</span>
-                        <a className="font-sans text-base text-tertiary transition-all hover:text-tertiary hover:underline" href="tel:(801) 367-0602" aria-label="Bishop's Phone Number">
+                    <div className="flex flex-col items-center justify-center gap-1 rounded border p-4 font-sans text-base uppercase text-primary shadow-md sm:p-4">
+                        <span className="font-medium uppercase">BISHOP MUGLESTON</span>
+                        <a className="text-tertiary transition-all hover:text-tertiary hover:underline" href="tel:(801) 367-0602" aria-label="Bishop's Phone Number">
                             (801) 367-0602
                         </a>
                     </div>
                 </Card>
                 <Card className="border-0">
-                    <div className="flex flex-col items-center justify-center gap-1 rounded border p-4 font-sans text-base text-primary shadow-md sm:p-4">
-                        <span className="font-sans text-base font-medium uppercase">EXECUTIVE SECRETARY</span>
-                        <a className="font-sans text-base text-tertiary transition-all hover:text-tertiary hover:underline" href="tel:(209) 790-9348" aria-label="Executive Secretary's Phone Number">
+                    <div className="flex flex-col items-center justify-center gap-1 rounded border p-4 font-sans text-base uppercase text-primary shadow-md sm:p-4">
+                        <span className="font-medium">EXECUTIVE SECRETARY</span>
+                        <a className="text-tertiary transition-all hover:text-tertiary hover:underline" href="tel:(209) 790-9348" aria-label="Executive Secretary's Phone Number">
                             (209) 790-9348
                         </a>
                     </div>
                 </Card>
                 <Card className="border-0">
-                    <div className="flex flex-col items-center justify-center gap-1 rounded border p-4 font-sans text-base text-primary shadow-md sm:p-4">
-                        <span className="font-sans text-base font-medium uppercase">ACTIVITY NIGHT</span>
-                        <span className="font-sans text-base">Mondays @ 7:00PM</span>
+                    <div className="flex flex-col items-center justify-center gap-1 rounded border p-4 font-sans text-base uppercase text-primary shadow-md sm:p-4">
+                        <span className="font-medium">ACTIVITY NIGHT</span>
+                        <span>Mondays @ 7:00PM</span>
                     </div>
                 </Card>
                 <Card className="border-0">
-                    <div className="flex flex-col items-center justify-center gap-1 rounded border p-4 font-sans text-base text-primary shadow-md sm:p-4">
-                        <span className="font-sans text-base font-medium uppercase">STAKE NIGHT</span>
-                        <span className="font-sans text-base">Thursdays @ 6:30PM</span>
+                    <div className="flex flex-col items-center justify-center gap-1 rounded border p-4 font-sans text-base uppercase text-primary shadow-md sm:p-4">
+                        <span className="font-medium">STAKE NIGHT</span>
+                        <span>Thursdays @ 6:30PM</span>
                     </div>
                 </Card>
             </section>
