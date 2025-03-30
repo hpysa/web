@@ -40,7 +40,7 @@ const Header = () => (
                 <Card className="border-0">
                     <div className="flex flex-col items-center justify-center gap-1 rounded border p-4 font-sans text-base text-primary shadow-md sm:p-4">
                         <span className="font-sans text-base font-medium uppercase">BISHOP MUGLESTON</span>
-                        <a className="font-sans text-base transition-all hover:text-tertiary hover:underline" href="tel:(801) 367-0602" aria-label="Bishop's Phone Number">
+                        <a className="font-sans text-base text-tertiary transition-all hover:text-tertiary hover:underline" href="tel:(801) 367-0602" aria-label="Bishop's Phone Number">
                             (801) 367-0602
                         </a>
                     </div>
@@ -48,7 +48,7 @@ const Header = () => (
                 <Card className="border-0">
                     <div className="flex flex-col items-center justify-center gap-1 rounded border p-4 font-sans text-base text-primary shadow-md sm:p-4">
                         <span className="font-sans text-base font-medium uppercase">EXECUTIVE SECRETARY</span>
-                        <a className="font-sans text-base transition-all hover:text-tertiary hover:underline" href="tel:(209) 790-9348" aria-label="Executive Secretary's Phone Number">
+                        <a className="font-sans text-base text-tertiary transition-all hover:text-tertiary hover:underline" href="tel:(209) 790-9348" aria-label="Executive Secretary's Phone Number">
                             (209) 790-9348
                         </a>
                     </div>

@@ -6,6 +6,9 @@
 .ant-list-item {
     @apply text-sm lg:text-base;
 }
+.ant-list-item a {
+    @apply underline hover:text-tertiary;
+}
 
 .ant-card-body {
     @apply !p-0;

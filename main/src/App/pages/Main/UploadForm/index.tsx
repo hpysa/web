@@ -1,31 +1,32 @@
-import { useMutation, useQuery } from '@tanstack/react-query';
-import { useState, memo, useEffect } from 'react';
-import { Button, DatePicker, Form, Modal, Tag, Tooltip } from 'antd';
-import axios from 'axios';
+import { filterData, getCSV, sortByDate } from '@/utils/csv';
 import { FormOutlined } from '@ant-design/icons';
+import { useMutation, useQuery } from '@tanstack/react-query';
+import { Button, DatePicker, Form, Modal, Tag, Tooltip } from 'antd';
 import { DatePickerProps, RangePickerProps } from 'antd/es/date-picker';
+import axios from 'axios';
 import dayjs from 'dayjs';
 import utc from 'dayjs/plugin/utc';
 import weekday from 'dayjs/plugin/weekday';
-import { filterData, sortByDate } from '@/utils/csv';
+import { memo, useEffect, useState } from 'react';
+import { useMediaQuery } from 'usehooks-ts';
 import Editor from '../Editor';
-import { getCSV } from '@/utils/csv';
 
 const UploadForm = memo(() => {
     dayjs.extend(utc);
     dayjs.extend(weekday);
 
     const [announcements, setAnnouncements] = useState<string>('');
-    const [date, setDate] = useState(dayjs().weekday(7).format('M/DD/YY'));
+    const [date, setDate] = useState(dayjs().startOf('day').weekday(0).format('M/DD/YY'));
     const [loading, setLoading] = useState<boolean>(false);
     const [open, setOpen] = useState<boolean>(false);
 
     const [form] = Form.useForm();
     const variant = Form.useWatch('variant', form);
+    const isDesktop = useMediaQuery('(min-width: 1024px)');
 
     const dataUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQ-nZns9eqbNOFLhBRWc1LRQLvt_gofRmUIOEVEyjBNBnF9_S0DUaJJ6kNUAmsQEEnm51b7CkTjqIV0/pub?gid=778227556&single=true&output=csv';
     const { data }: { data: any } = useQuery({
-        queryKey: ['uploadForm'],
+        queryKey: ['announcements'],
         queryFn: () => getCSV(dataUrl),
         enabled: true
         // refetchInterval: 5000,
@@ -38,9 +39,13 @@ const UploadForm = memo(() => {
     useEffect(() => {
         if (data) {
             const [{ Announcements }] = sortByDate(filterData(data));
-            setAnnouncements(Announcements.replaceAll('\\n', '\n'));
+            setAnnouncements(Announcements.replace(/"/g, '').replace(/'/g, '').replaceAll('\\n', '\n'));
         }
     }, [data]);
+
+    useEffect(() => {
+        console.log(date);
+    }, [date]);
 
     const postAnnouncements = async (e: any) => {
         e.preventDefault();
@@ -92,7 +97,7 @@ const UploadForm = memo(() => {
                 open={open}
                 onCancel={() => setOpen(false)}
                 className="!w-full max-w-screen-sm lg:max-w-screen-md"
-                centered
+                centered={isDesktop ? true : false}
             >
                 <Form variant={variant || 'filled'} initialValues={{ variant: 'filled' }} requiredMark={() => <Tag color="error">Required</Tag>}>
                     <Form.Item
@@ -109,7 +114,7 @@ const UploadForm = memo(() => {
                     >
                         <Editor value={announcements} onChange={setAnnouncements} />
                     </Form.Item>
-                    <Form.Item name="date" rules={[{ required: true, message: 'Date cannot be empty' }]} initialValue={dayjs().weekday(7)}>
+                    <Form.Item name="date" rules={[{ required: true, message: 'Date cannot be empty' }]} initialValue={dayjs().startOf('day').weekday(0)}>
                         <DatePicker onChange={onDateChange} format={'MM/DD/YY'} disabledDate={disabledDate} />
                     </Form.Item>
                 </Form>

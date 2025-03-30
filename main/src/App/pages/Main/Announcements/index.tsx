@@ -22,7 +22,11 @@ const Announcements = memo(() => {
         if (data) {
             const [{ Date, Announcements }] = sortByDate(filterData(data));
             setDate(Date);
-            setAnnouncements(Announcements.split(/(?<=<\/p>)/));
+            setAnnouncements(
+                Announcements.replace(/"/g, '')
+                    .replace(/'/g, '')
+                    .split(/(?<=<\/p>)/)
+            );
         }
     }, [data]);
 
