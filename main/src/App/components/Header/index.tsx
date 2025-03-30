@@ -38,30 +38,30 @@ const Header = () => (
             </section>
             <section className="text-md mx-auto grid w-full grid-cols-1 grid-rows-2 gap-6 sm:grid-cols-[repeat(2,minmax(15rem,1fr))] lg:gap-8">
                 <Card className="border-0">
-                    <div className="flex flex-col items-center justify-center gap-1 rounded border p-4 font-sans text-base shadow-md sm:p-4">
-                        <span className="font-sans text-base font-medium uppercase text-primary">BISHOP MUGLESTON</span>
+                    <div className="flex flex-col items-center justify-center gap-1 rounded border p-4 font-sans text-base text-primary shadow-md sm:p-4">
+                        <span className="font-sans text-base font-medium uppercase">BISHOP MUGLESTON</span>
                         <a className="font-sans text-base transition-all hover:text-tertiary hover:underline" href="tel:(801) 367-0602" aria-label="Bishop's Phone Number">
                             (801) 367-0602
                         </a>
                     </div>
                 </Card>
                 <Card className="border-0">
-                    <div className="flex flex-col items-center justify-center gap-1 rounded border p-4 font-sans text-base shadow-md sm:p-4">
-                        <span className="font-sans text-base font-medium uppercase text-primary">EXECUTIVE SECRETARY</span>
+                    <div className="flex flex-col items-center justify-center gap-1 rounded border p-4 font-sans text-base text-primary shadow-md sm:p-4">
+                        <span className="font-sans text-base font-medium uppercase">EXECUTIVE SECRETARY</span>
                         <a className="font-sans text-base transition-all hover:text-tertiary hover:underline" href="tel:(209) 790-9348" aria-label="Executive Secretary's Phone Number">
                             (209) 790-9348
                         </a>
                     </div>
                 </Card>
                 <Card className="border-0">
-                    <div className="flex flex-col items-center justify-center gap-1 rounded border p-4 font-sans text-base shadow-md sm:p-4">
-                        <span className="font-sans text-base font-medium uppercase text-primary">ACTIVITY NIGHT</span>
+                    <div className="flex flex-col items-center justify-center gap-1 rounded border p-4 font-sans text-base text-primary shadow-md sm:p-4">
+                        <span className="font-sans text-base font-medium uppercase">ACTIVITY NIGHT</span>
                         <span className="font-sans text-base">Mondays @ 7:00PM</span>
                     </div>
                 </Card>
                 <Card className="border-0">
-                    <div className="flex flex-col items-center justify-center gap-1 rounded border p-4 font-sans text-base shadow-md sm:p-4">
-                        <span className="font-sans text-base font-medium uppercase text-primary">STAKE NIGHT</span>
+                    <div className="flex flex-col items-center justify-center gap-1 rounded border p-4 font-sans text-base text-primary shadow-md sm:p-4">
+                        <span className="font-sans text-base font-medium uppercase">STAKE NIGHT</span>
                         <span className="font-sans text-base">Thursdays @ 6:30PM</span>
                     </div>
                 </Card>
