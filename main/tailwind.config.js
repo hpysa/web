@@ -20,9 +20,9 @@ module.exports = {
                 sm: 'calc(var(--radius) - 4px)'
             },
             colors: {
-                primary: '#6A4F3A',
-                secondary: '#37281e',
-                tertiary: '#906b4e',
+                primary: '#42403E',
+                secondary: '#37281E',
+                tertiary: '#8A6C59',
                 sidebar: {
                     DEFAULT: 'hsl(var(--sidebar-background))',
                     foreground: 'hsl(var(--sidebar-foreground))',

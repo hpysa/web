@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
-const Announcements = () => (
+const Banner = () => (
     <aside className="-mb-4 mt-4 w-full">
         <Swiper
             autoplay={{
@@ -55,4 +55,4 @@ const Announcements = () => (
     </aside>
 );
 
-export default Announcements;
+export default Banner;

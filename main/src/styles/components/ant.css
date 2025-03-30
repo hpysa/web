@@ -1,5 +1,10 @@
-.ant-modal-wrap {
+.ant-modal-wrap,
+.ant-picker-dropdown {
     @apply !z-[99999];
+}
+
+.ant-list-item {
+    @apply text-base;
 }
 
 .ant-card-body {

@@ -32,7 +32,7 @@ const UploadForm = memo(() => {
         // staleTime: 5000,
     });
 
-    const disabledDate: RangePickerProps['disabledDate'] = (current) => current < dayjs().weekday(0) || current.day() !== 0;
+    const disabledDate: RangePickerProps['disabledDate'] = (current) => current < dayjs().startOf('day') || current.day() !== 0;
     const onDateChange: DatePickerProps['onChange'] = (_, dateString) => typeof dateString === 'string' && setDate(dateString);
 
     useEffect(() => {
@@ -72,8 +72,8 @@ const UploadForm = memo(() => {
     return (
         <>
             <Tooltip title="Announcements" placement="left">
-                <button className="flex size-20 items-center justify-center rounded-full border-2 border-[#3448c5] bg-white shadow-lg drop-shadow-lg focus-visible:outline-[#3448c5]" aria-label="Cloudinary Upload" onClick={() => setOpen(true)}>
-                    <FormOutlined className="text-[#3448c5] [&>svg]:size-8" />
+                <button className="flex size-16 items-center justify-center rounded-full border-2 border-primary bg-white shadow-lg drop-shadow-lg lg:size-20" aria-label="Cloudinary Upload" onClick={() => setOpen(true)}>
+                    <FormOutlined className="text-primary [&>svg]:size-6 [&>svg]:lg:size-8" />
                 </button>
             </Tooltip>
             <Modal

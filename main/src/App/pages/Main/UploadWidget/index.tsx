@@ -18,8 +18,8 @@ const UploadWidget = () => {
 
     return (
         <Tooltip title="Image Upload" placement="left">
-            <button className="flex size-20 items-center justify-center rounded-full border-2 border-[#3448c5] bg-white shadow-lg drop-shadow-lg focus-visible:outline-[#3448c5]" aria-label="Cloudinary Upload" onClick={() => widgetRef.current.open()}>
-                <img className="size-12" src="https://res.cloudinary.com/hpysa/f_auto,q_auto/cloudinary.svg" alt="Cloudinary Logo" />
+            <button className="flex size-16 items-center justify-center rounded-full border-2 border-[#3448c5] bg-white shadow-lg drop-shadow-lg focus-visible:outline-[#3448c5] lg:size-20" aria-label="Cloudinary Upload" onClick={() => widgetRef.current.open()}>
+                <img className="size-8 lg:size-12" src="https://res.cloudinary.com/hpysa/f_auto,q_auto/cloudinary.svg" alt="Cloudinary Logo" />
             </button>
         </Tooltip>
     );

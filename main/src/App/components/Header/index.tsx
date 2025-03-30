@@ -1,9 +1,9 @@
 import { Card, Tooltip } from 'antd';
-import Announcements from './Announcements';
+import Banner from './Banner';
 
 const Header = () => (
     <>
-        <Announcements />
+        <Banner />
         <header className="flex w-full flex-col items-center justify-center gap-6 text-center sm:gap-8">
             <img className="rounded" src="https://res.cloudinary.com/hpysa/f_auto,q_auto/hero" alt="Jesus Christ" />
             <section className="flex w-full flex-col items-center justify-center gap-6 font-sans sm:gap-8">
@@ -38,31 +38,31 @@ const Header = () => (
             </section>
             <section className="text-md mx-auto grid w-full grid-cols-1 grid-rows-2 gap-6 sm:grid-cols-[repeat(2,minmax(15rem,1fr))] lg:gap-8">
                 <Card className="border-0">
-                    <div className="flex flex-col items-center justify-center rounded border p-4 shadow-md sm:p-4">
-                        <span className="font-serif font-bold text-primary sm:text-lg">BISHOP MUGLESTON</span>
-                        <a className="font-sans text-base transition-all hover:text-tertiary hover:underline sm:text-lg" href="tel:(801) 367-0602" aria-label="Bishop's Phone Number">
+                    <div className="flex flex-col items-center justify-center gap-1 rounded border p-4 font-sans text-base shadow-md sm:p-4">
+                        <span className="font-sans text-base font-medium uppercase text-primary">BISHOP MUGLESTON</span>
+                        <a className="font-sans text-base transition-all hover:text-tertiary hover:underline" href="tel:(801) 367-0602" aria-label="Bishop's Phone Number">
                             (801) 367-0602
                         </a>
                     </div>
                 </Card>
                 <Card className="border-0">
-                    <div className="flex flex-col items-center justify-center rounded border p-4 shadow-md sm:p-4">
-                        <span className="font-serif font-bold text-primary sm:text-lg">EXECUTIVE SECRETARY</span>
-                        <a className="font-sans text-base transition-all hover:text-tertiary hover:underline sm:text-lg" href="tel:(209) 790-9348" aria-label="Executive Secretary's Phone Number">
+                    <div className="flex flex-col items-center justify-center gap-1 rounded border p-4 font-sans text-base shadow-md sm:p-4">
+                        <span className="font-sans text-base font-medium uppercase text-primary">EXECUTIVE SECRETARY</span>
+                        <a className="font-sans text-base transition-all hover:text-tertiary hover:underline" href="tel:(209) 790-9348" aria-label="Executive Secretary's Phone Number">
                             (209) 790-9348
                         </a>
                     </div>
                 </Card>
                 <Card className="border-0">
-                    <div className="flex flex-col items-center justify-center rounded border p-4 shadow-md sm:p-4">
-                        <span className="font-serif font-bold text-primary sm:text-lg">ACTIVITY NIGHT &#47; FHE</span>
-                        <span className="font-sans text-base sm:text-lg">Mondays @ 7:00PM</span>
+                    <div className="flex flex-col items-center justify-center gap-1 rounded border p-4 font-sans text-base shadow-md sm:p-4">
+                        <span className="font-sans text-base font-medium uppercase text-primary">ACTIVITY NIGHT</span>
+                        <span className="font-sans text-base">Mondays @ 7:00PM</span>
                     </div>
                 </Card>
                 <Card className="border-0">
-                    <div className="flex flex-col items-center justify-center rounded border p-4 shadow-md sm:p-4">
-                        <span className="font-serif font-bold text-primary sm:text-lg">STAKE NIGHT &#47; INSTITUTE</span>
-                        <span className="font-sans text-base sm:text-lg">Thursdays @ 6:30PM</span>
+                    <div className="flex flex-col items-center justify-center gap-1 rounded border p-4 font-sans text-base shadow-md sm:p-4">
+                        <span className="font-sans text-base font-medium uppercase text-primary">STAKE NIGHT</span>
+                        <span className="font-sans text-base">Thursdays @ 6:30PM</span>
                     </div>
                 </Card>
             </section>
