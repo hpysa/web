@@ -25,7 +25,7 @@ const Editor: React.FC<EditorProps> = ({ value, onChange }) => {
             modules={modules}
             onChange={handleChange}
             placeholder="Please type each announcement on a separate line"
-            className={`[&_.ql-blank]:text-sm [&_.ql-blank]:before:leading-loose [&_.ql-container]:h-72 [&_.ql-container]:rounded [&_.ql-container]:bg-[rgba(0,0,0,0.04)] [&_.ql-container]:font-[monospace] [&_.ql-container]:transition-colors [&_.ql-container]:![border:1px_solid_transparent] [&_.ql-container]:focus-within:!border-[#1677ff] [&_.ql-container]:focus-within:bg-white lg:[&_.ql-container]:h-96 [&_.ql-editor_p]:text-sm [&_.ql-editor_p]:leading-loose [&_.ql-toolbar]:mb-4 [&_.ql-toolbar]:rounded ${internalValue === '' && '[&_.ql-container]:focus-within:!border-[#ff4d4f]'}`}
+            className={`[&_.ql-blank]:text-sm [&_.ql-blank]:before:!leading-loose [&_.ql-blank]:lg:text-base [&_.ql-container]:h-72 [&_.ql-container]:rounded [&_.ql-container]:bg-[rgba(0,0,0,0.04)] [&_.ql-container]:font-[monospace] [&_.ql-container]:transition-colors [&_.ql-container]:![border:1px_solid_transparent] [&_.ql-container]:focus-within:!border-[#1677ff] [&_.ql-container]:focus-within:bg-white lg:[&_.ql-container]:h-96 [&_.ql-editor_p]:text-sm [&_.ql-editor_p]:!leading-loose [&_.ql-editor_p]:lg:text-base [&_.ql-toolbar]:mb-4 [&_.ql-toolbar]:rounded ${internalValue === '' && '[&_.ql-container]:focus-within:!border-[#ff4d4f]'}`}
         />
     );
 };

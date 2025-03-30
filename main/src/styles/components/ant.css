@@ -4,7 +4,7 @@
 }
 
 .ant-list-item {
-    @apply text-base;
+    @apply text-sm lg:text-base;
 }
 
 .ant-card-body {
