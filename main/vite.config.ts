@@ -5,25 +5,25 @@ import { defineConfig } from 'vite';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  optimizeDeps: {
-    esbuildOptions: {
-      target: 'es2020',
+    optimizeDeps: {
+        esbuildOptions: {
+            target: 'es2021'
+        }
     },
-  },
-  esbuild: {
-    // https://github.com/vitejs/vite/issues/8644#issuecomment-1159308803
-    logOverride: { 'this-is-undefined-in-esm': 'silent' },
-  },
-  plugins: [
-    react({
-      babel: {
-        plugins: ['babel-plugin-macros', 'babel-plugin-styled-components'],
-      },
-    }),
-	],
+    esbuild: {
+        // https://github.com/vitejs/vite/issues/8644#issuecomment-1159308803
+        logOverride: { 'this-is-undefined-in-esm': 'silent' }
+    },
+    plugins: [
+        react({
+            babel: {
+                plugins: ['babel-plugin-macros', 'babel-plugin-styled-components']
+            }
+        })
+    ],
     resolve: {
-		alias: {
-			"@": path.resolve(__dirname, "./src"),
-		},
-	}
+        alias: {
+            '@': path.resolve(__dirname, './src')
+        }
+    }
 });

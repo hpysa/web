@@ -1,23 +1,25 @@
-.swiper-button-prev::after, .swiper-button-next::after {
-	@apply !text-2xl lg:!text-4xl font-bold lg:font-normal;
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    @apply !text-2xl font-bold lg:!text-4xl lg:font-normal;
 }
 
-.swiper-button-prev, .swiper-button-next {
-	@apply transition-all hover:text-[#3395FF];
+.swiper-button-prev,
+.swiper-button-next {
+    @apply transition-all hover:text-[#3395FF];
 }
 
 .swiper-button-prev {
-	@apply !-left-3 lg:!-left-12 xl:!-left-16;
+    @apply !-left-3 lg:!-left-12 xl:!-left-16;
 }
 
 .swiper-button-next {
-	@apply !-right-3 lg:!-right-12 xl:!-right-16;
+    @apply !-right-3 lg:!-right-12 xl:!-right-16;
 }
 
 .swiper-pagination {
-	@apply !right-3 xxs:!right-0 xxs:!p-4 sm:!right-0 sm:!px-4 sm:!py-6;
+    @apply !right-3 xxs:!right-0 xxs:!p-4 sm:!right-0 sm:!px-4 sm:!py-6;
 }
 
 .swiper-pagination-bullet-active {
-	@apply !bg-primary;
+    @apply !bg-primary;
 }

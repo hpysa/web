@@ -1,48 +1,48 @@
 @font-face {
-	font-family: 'Windsor Pro';
-	font-style: normal;
-	font-weight: 400;
-	src: url('/fonts/windsor-pro-regular.woff2') format('woff2');
+    font-family: 'Windsor Pro';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/fonts/windsor-pro-regular.woff2') format('woff2');
 }
 
 @font-face {
-	font-family: 'Windsor Pro';
-	font-style: oblique;
-	font-weight: 400;
-	src: url('/fonts/windsor-pro-elongated.woff2') format('woff2');
+    font-family: 'Windsor Pro';
+    font-style: oblique;
+    font-weight: 400;
+    src: url('/fonts/windsor-pro-elongated.woff2') format('woff2');
 }
 
 @font-face {
-	font-family: 'Windsor Pro';
-	font-style: normal;
-	font-weight: 700;
-	src: url('/fonts/windsor-pro-bold.woff2') format('woff2');
+    font-family: 'Windsor Pro';
+    font-style: normal;
+    font-weight: 700;
+    src: url('/fonts/windsor-pro-bold.woff2') format('woff2');
 }
 
 @font-face {
-	font-family: 'Windsor Pro';
-	font-style: normal;
-	font-weight: 800;
-	src: url('/fonts/windsor-pro-extra-bold.woff2') format('woff2');
+    font-family: 'Windsor Pro';
+    font-style: normal;
+    font-weight: 800;
+    src: url('/fonts/windsor-pro-extra-bold.woff2') format('woff2');
 }
 
 @font-face {
-	font-family: 'Windsor Pro';
-	font-style: normal;
-	font-weight: 900;
-	src: url('/fonts/windsor-pro-ultra-heavy.woff2') format('woff2');
+    font-family: 'Windsor Pro';
+    font-style: normal;
+    font-weight: 900;
+    src: url('/fonts/windsor-pro-ultra-heavy.woff2') format('woff2');
 }
 
 @font-face {
-	font-family: 'Nimbus Sans';
-	src: url('/fonts/nimbus-sans-regular.woff') format('woff');
-	font-style: normal;
-	font-weight: 400;
+    font-family: 'Nimbus Sans';
+    src: url('/fonts/nimbus-sans-regular.woff') format('woff');
+    font-style: normal;
+    font-weight: 400;
 }
 
 @font-face {
-	font-family: 'Nimbus Sans';
-	src: url('/fonts/nimbus-sans-bold.woff') format('woff');
-	font-style: bold;
-	font-weight: 700;
+    font-family: 'Nimbus Sans';
+    src: url('/fonts/nimbus-sans-bold.woff') format('woff');
+    font-style: bold;
+    font-weight: 700;
 }

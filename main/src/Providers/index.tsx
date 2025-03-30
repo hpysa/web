@@ -10,6 +10,6 @@ const Providers = {
     AntdProvider,
     QueryProvider,
     ContextProvider
-}
+};
 
 export default Providers;

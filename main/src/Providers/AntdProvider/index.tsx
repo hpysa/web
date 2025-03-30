@@ -4,9 +4,7 @@ import { memo } from 'react';
 
 const AntdProvider = memo(({ children }: ProviderType) => (
     <ConfigProvider>
-        <App>
-            {children}
-        </App>
+        <App>{children}</App>
     </ConfigProvider>
 ));
 

@@ -1,23 +1,25 @@
 .ant-card-body {
-	@apply !p-0;
+    @apply !p-0;
 }
 
 .ant-collapse {
-	@apply !font-sans !rounded;
+    @apply !rounded !font-sans;
 }
 
 .ant-collapse-item-active svg {
-	@apply !text-primary !transition-all;
+    @apply !text-primary !transition-all;
 }
 
 .ant-collapse-header-text {
-	@apply !font-bold;
+    @apply !font-bold;
 }
 
-.ant-collapse-header-text, .ant-table-cell {
-	@apply sm:!text-base;
+.ant-collapse-header-text,
+.ant-table-cell {
+    @apply sm:!text-base;
 }
 
-.ant-pagination-item-active, .ant-pagination-item-active a {
-	@apply !text-primary !border-primary
+.ant-pagination-item-active,
+.ant-pagination-item-active a {
+    @apply !border-primary !text-primary;
 }
