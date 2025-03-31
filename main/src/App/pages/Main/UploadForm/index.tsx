@@ -1,4 +1,4 @@
-import { filterData, getCSV, sortByDate } from '@/utils/csv';
+import { getCSV, sortByDate } from '@/utils/csv';
 import { FormOutlined } from '@ant-design/icons';
 import { useMutation, useQuery } from '@tanstack/react-query';
 import { Button, DatePicker, Form, Modal, Tag, Tooltip } from 'antd';
@@ -15,8 +15,8 @@ const UploadForm = memo(() => {
     dayjs.extend(utc);
     dayjs.extend(weekday);
 
+    const [date, setDate] = useState<string>(dayjs().startOf('day').weekday(0).format('M/DD/YY'));
     const [announcements, setAnnouncements] = useState<string>('');
-    const [date, setDate] = useState(dayjs().startOf('day').weekday(0).format('M/DD/YY'));
     const [loading, setLoading] = useState<boolean>(false);
     const [open, setOpen] = useState<boolean>(false);
 
@@ -25,7 +25,7 @@ const UploadForm = memo(() => {
     const isDesktop = useMediaQuery('(min-width: 1024px)');
 
     const dataUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQ-nZns9eqbNOFLhBRWc1LRQLvt_gofRmUIOEVEyjBNBnF9_S0DUaJJ6kNUAmsQEEnm51b7CkTjqIV0/pub?gid=778227556&single=true&output=csv';
-    const { data }: { data: any } = useQuery({
+    const { data, isFetched }: { data: any; isFetched: boolean } = useQuery({
         queryKey: ['announcements'],
         queryFn: () => getCSV(dataUrl),
         enabled: true
@@ -37,15 +37,11 @@ const UploadForm = memo(() => {
     const onDateChange: DatePickerProps['onChange'] = (_, dateString) => typeof dateString === 'string' && setDate(dateString);
 
     useEffect(() => {
-        if (data) {
-            const [{ Announcements }] = sortByDate(filterData(data));
+        if (isFetched && data) {
+            const [{ Announcements }] = sortByDate(data);
             setAnnouncements(Announcements.replace(/"/g, '').replace(/'/g, '').replaceAll('\\n', '\n'));
         }
     }, [data]);
-
-    useEffect(() => {
-        console.log(date);
-    }, [date]);
 
     const postAnnouncements = async (e: any) => {
         e.preventDefault();

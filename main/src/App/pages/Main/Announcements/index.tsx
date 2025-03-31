@@ -1,16 +1,16 @@
 import { getCSV } from '@/utils/csv';
-import { filterData, sortByDate } from '@/utils/csv';
+import { sortByDate } from '@/utils/csv';
 import { useQuery } from '@tanstack/react-query';
 import { List, Spin } from 'antd';
 import parse from 'html-react-parser';
 import { memo, useEffect, useState } from 'react';
 
 const Announcements = memo(() => {
-    const [date, setDate] = useState(new Date().toLocaleDateString('en-US', { month: 'numeric', day: 'numeric' }));
+    const [date, setDate] = useState<string>(new Date().toLocaleDateString('en-US', { month: 'numeric', day: 'numeric' }));
     const [announcements, setAnnouncements] = useState<string[]>([]);
 
     const dataUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQ-nZns9eqbNOFLhBRWc1LRQLvt_gofRmUIOEVEyjBNBnF9_S0DUaJJ6kNUAmsQEEnm51b7CkTjqIV0/pub?gid=778227556&single=true&output=csv';
-    const { data, isPending, isError }: { data: any; isPending: boolean; isError: boolean } = useQuery({
+    const { data, isPending, isError, isFetched }: { data: any; isPending: boolean; isError: boolean; isFetched: boolean } = useQuery({
         queryKey: ['announcements'],
         queryFn: () => getCSV(dataUrl),
         enabled: true
@@ -19,8 +19,8 @@ const Announcements = memo(() => {
     });
 
     useEffect(() => {
-        if (data) {
-            const [{ Date, Announcements }] = sortByDate(filterData(data));
+        if (isFetched && data) {
+            const [{ Date, Announcements }] = sortByDate(data);
             setDate(Date);
             setAnnouncements(
                 Announcements.replace(/"/g, '')
