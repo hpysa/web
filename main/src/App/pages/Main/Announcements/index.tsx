@@ -20,16 +20,15 @@ const Announcements = memo(() => {
 
     useEffect(() => {
         if (isFetched && data) {
-            const sortedData = sortByDate(data); // Ensure data is sorted by Timestamp
+            const sortedData = sortByDate(data);
             const [{ Date: sortedDate, Announcements }] = sortedData;
 
-            // Calculate the next Sunday or use the announcement date
             const today = new Date();
             const dateObj = new Date(sortedDate);
 
-            // If the announcement date is in the past, calculate the next Sunday
-            const announcementDate = today > dateObj ? new Date(today.setDate(today.getDate() + (7 - today.getDay()))) : new Date(dateObj);
-            setDate(announcementDate.toLocaleDateString('en-US', { month: 'numeric', day: 'numeric' }));
+            // If the announcement date is in the past, get the next Sunday
+            const sunday = today > dateObj ? new Date(today.setDate(today.getDate() + (7 - today.getDay()))) : dateObj;
+            setDate(sunday.toLocaleDateString('en-US', { month: 'numeric', day: 'numeric' }));
             setAnnouncements(
                 Announcements.replace(/"/g, '')
                     .replace(/'/g, '')
