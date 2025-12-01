@@ -20,20 +20,28 @@ const Announcements = memo(() => {
 
     useEffect(() => {
         if (isFetched && data) {
-            const [{ Date, Announcements }] = sortByDate(data);
-            setDate(Date);
+            const sortedData = sortByDate(data); // Ensure data is sorted by Timestamp
+            const [{ Date: sortedDate, Announcements }] = sortedData;
+
+            // Calculate the next Sunday or use the announcement date
+            const today = new Date();
+            const dateObj = new Date(sortedDate);
+
+            // If the announcement date is in the past, calculate the next Sunday
+            const announcementDate = today > dateObj ? new Date(today.setDate(today.getDate() + (7 - today.getDay()))) : new Date(dateObj);
+            setDate(announcementDate.toLocaleDateString('en-US', { month: 'numeric', day: 'numeric' }));
             setAnnouncements(
                 Announcements.replace(/"/g, '')
                     .replace(/'/g, '')
                     .split(/(?<=<\/p>)/)
             );
         }
-    }, [data]);
+    }, [data, isFetched]);
 
     if (isPending) return <Spin size="large" className="w-full" />;
     if (isError) return <div>Error</div>;
 
-    return !!announcements.length ? (
+    return announcements.length ? (
         <section className="[&_.ant-list-header]:rounded [&_.ant-list-header]:bg-[#f0f4f9] [&_.ant-list]:rounded">
             <List bordered header={<div className="text-base font-semibold sm:text-lg">{`${date} `}Announcements</div>} dataSource={announcements} renderItem={(announcement) => <List.Item>{parse(announcement)}</List.Item>} />
         </section>
